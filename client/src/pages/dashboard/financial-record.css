@@ -1,0 +1,139 @@
+/* Centered container for the app */
+.dashboard-container {
+    width: 65%;
+  }
+  
+  /* General styling for headers within the app */
+  /* General styling for headers within the app */
+/* General styling for headers within the app */
+
+.total-monthly-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #273340;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+   
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+   
+   
+   
+}
+    
+    
+
+
+h1,
+h2 {
+  color: #273340;
+  text-align:center;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px; /* Add padding inside the box */
+  border: 2px solid #273340; /* Add a border around the box */
+  border-radius: 10px; /* Make the corners rounded */
+  background-color: #f0f0f0; /* Add a background color */
+  display: inline-block; /* Make the box fit the content */
+}
+  /* Form and list container */
+  .form-container,
+  .list-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Common class for all buttons */
+  .button {
+    background-color: #D4D4D4;
+    color: #131212;
+    border: 2px solid #2B2B2B;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #988686;
+    border: 2px solid #988686;
+  }
+  .button-delete {
+    background-color: #131212;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button-delete:hover {
+    background-color: #131212;
+  }
+  
+  /* Common class for all input fields and selects */
+  .input {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000000;
+  }
+  
+  /* Labels for better readability */
+  label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .table-container {
+    margin: 20px;
+    overflow-x: auto; /* Enables horizontal scrolling if the table is too wide */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Grey border */
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #2B2B2B; /* Dark grey header */
+    color: white;
+    font-size: 15px;
+    
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Zebra striping for rows, light grey */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #D4D4D4; /* Light blue hover effect for rows */
+  }
