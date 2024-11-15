@@ -14,8 +14,8 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
-const mongoURI: string =
-  "mongodb+srv://anuragbhattarai31:OWMwtTYUuJg3ohmx@financetracker.0acon.mongodb.net/";
+const mongoURI: string = process.env.MONGODB_URI || "";
+  
 
 mongoose
   .connect(mongoURI)
