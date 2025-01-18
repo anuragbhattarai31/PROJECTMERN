@@ -1,6 +1,9 @@
 import { useUser } from "@clerk/clerk-react";
 import { createContext, useContext, useEffect, useState } from "react";
 
+
+
+
 export interface FinancialRecord {
   _id?: string;
   userId: string;
@@ -30,10 +33,16 @@ export const FinancialRecordsProvider = ({
   const [records, setRecords] = useState<FinancialRecord[]>([]);
   const { user } = useUser();
 
+
+
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const fetchRecords = async () => {
     if (!user) return;
+    console.log("API URL being used for fetch:", API_URL);
+
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}/financial-records/getAllByUserID/${user.id}`
+      `${API_URL}/financial-records/getAllByUserID/${user.id}`
     );
 
     if (response.ok) {
@@ -48,7 +57,7 @@ export const FinancialRecordsProvider = ({
   }, [user]);
 
   const addRecord = async (record: FinancialRecord) => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/financial-records`, {
+    const response = await fetch(`${API_URL}/financial-records/`, {
       method: "POST",
       body: JSON.stringify(record),
       headers: {
@@ -66,7 +75,7 @@ export const FinancialRecordsProvider = ({
 
   const updateRecord = async (id: string, newRecord: FinancialRecord) => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}/financial-records/${id}`,
+      `${API_URL}/financial-records/${id}`,
       {
         method: "PUT",
         body: JSON.stringify(newRecord),
@@ -94,7 +103,7 @@ export const FinancialRecordsProvider = ({
 
   const deleteRecord = async (id: string) => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}/financial-records/${id}`,
+      `${API_URL}/financial-records/${id}`,
       {
         method: "DELETE",
       }
